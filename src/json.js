@@ -2,8 +2,8 @@ const template = require('babel-template')
 const fs = require('fs')
 
 
-const jsonStringify = fs.readFileSync('/Users/michael/Workspace/ae-dev/babel-preset-extendscript/src/jsonify/stringify.js').toString()
-const jsonParse = fs.readFileSync('/Users/michael/Workspace/ae-dev/babel-preset-extendscript/src/jsonify/parse.js').toString()
+const jsonStringify = fs.readFileSync('./jsonify/stringify.js').toString()
+const jsonParse = fs.readFileSync('./jsonify/parse.js').toString()
 
 function createTransformPlugin(name, replace, code) {
   return function transformObjectGetProtoOf({types: t}) {
